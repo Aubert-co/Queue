@@ -1,6 +1,6 @@
 import ioRedis from "ioredis";
 
-import { Queue } from "bullmq";
+
 
 const REDIS_URL = process.env.REDIS_URL
 
@@ -9,7 +9,7 @@ if(!REDIS_URL){
 }
 
 export const connection = new ioRedis( REDIS_URL,{
-    maxRetriesPerRequest:5
+    maxRetriesPerRequest:null
 } )
 
 
